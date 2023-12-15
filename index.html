@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body style="background-image: linear-gradient(to right, white, black, red);">
+<body style="background-color: #04AA6D;">
 
 <style>
     table{
@@ -12,7 +12,7 @@
         height: 400px;
         /* border: 3px solid black;
         border-radius: 50px; */
-      background-image: linear-gradient(to right, skyblue, white);
+      background-color: #000;
       border: 3px solid black;
       border-radius: 20px;
        
@@ -39,27 +39,38 @@
     button{
        background: none;
         width: 80%;
-        color: black;
+        color: white;
         border: 3px solid black;
         font-size: 20px;
         font-family: Georgia, 'Times New Roman', Times, serif;
         font-style: italic;
         /* box-shadow: 0 10px 30px 0 rgba(231, 229, 233, 0.5); */
         /* border-radius: 120px; */
-        border-right-color: grey;
-        border-left-color: grey;
-
+        /* border-right-color: grey;
+        border-left-color: grey; */
+        box-shadow: 0 5px 5px rgba(240, 237, 237, 0.3);
         border-radius: 60%;
          padding: 10px;
 
     }
-    button:hover {
-        background-color: #000;
+    /* button:hover { */
+        /* background-color: #000;
   color: white;
 }
 
 button.active {
     background-color: #04AA6D;
+} */
+.button:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button:active {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.button:disabled {
+  box-shadow: none;
 }
 
     
@@ -149,9 +160,10 @@ button.active {
             <td onclick="Setdata(6)">
                 <button>6</button>
             </td>
-            <td>
+            <td onclick="enterData('-')">
                 <button style="color: darkgoldenrod; font-weight: bolder; font-size: 20px;" id="operator">-</button>
             </td>
+            
         </tr>
         <tr>
             <td onclick="Setdata(1)">
